@@ -1,0 +1,37 @@
+/* Color pallet for the game */
+:root {
+  /* Backgrounds */
+  --galaxy-dark: #0b0f2b;       /* Deep space navy */
+  --galaxy-purple: #2b1055;    /* Cosmic purple */
+  --galaxy-blue: #1b2a4e;      /* Night sky blue */
+
+  /* Accents */
+  --nebula-pink: #ff5ebc;      /* Nebula glow */
+  --nebula-cyan: #5ee7ff;      /* Star light cyan */
+  --star-yellow: #ffe066;      /* Star glow */
+
+  /* Text */
+  --text-main: #f1f1f1;        /* Main text */
+  --text-muted: #b3b3cc;      /* Secondary text */
+
+  /* Buttons */
+  --btn-bg: #3a1c71;
+  --btn-hover: #6a4bcf;
+}
+body{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 3.5rem;
+    color: var(--text-main);
+}
+.choices{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
