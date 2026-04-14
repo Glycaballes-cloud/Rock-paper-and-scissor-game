@@ -23,17 +23,21 @@ function play(playerChoice) {
 
      updateResultColor(result);
 }
+function updateResultColor(result) {
+    switch (result) {
+        case "You win!":
+            resultDisplay.style.color =
+                rootStyles.getPropertyValue("--nebula-cyan");
+            break;
 
-    switch(result){
-        case "You win!"
-            resultDisplay.style.color = "green";
+        case "Computer wins!":
+            resultDisplay.style.color =
+                rootStyles.getPropertyValue("--nebula-pink");
             break;
-        case "Computer wins!"
-            resultDisplay.style.color = "red";
-            break;
+
         default:
-            resultDisplay.style.color = "black";        
-
+            resultDisplay.style.color =
+                rootStyles.getPropertyValue("--star-yellow");
     }
-
+}
 
