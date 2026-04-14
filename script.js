@@ -20,4 +20,18 @@ function play(playerChoice) {
     playerDisplay.textContent = `Player: ${playerChoice}`;
     computerDisplay.textContent = `Computer: ${computerChoice}`;
     resultDisplay.textContent = result;
+
+    switch(result){
+        case "You win!"
+            resultDisplay.style.color = "green";
+            break;
+        case "Computer wins!"
+            resultDisplay.style.color = "red";
+            break;
+        default:
+            resultDisplay.style.color = "black";        
+
+    }
+}
+
 }
