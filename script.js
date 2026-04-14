@@ -17,12 +17,17 @@ function play(playerChoice) {
     } else {
         result = "Computer wins!";
     }
+
+ // Update text
     playerDisplay.textContent = `Player: ${playerChoice}`;
     computerDisplay.textContent = `Computer: ${computerChoice}`;
     resultDisplay.textContent = result;
-
+    
+// Update color
      updateResultColor(result);
 }
+
+// Color handler
 function updateResultColor(result) {
     switch (result) {
         case "You win!":
