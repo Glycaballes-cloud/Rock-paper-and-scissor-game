@@ -4,7 +4,10 @@
   --galaxy-dark: #0b0f2b;       /* Deep space navy */
   --galaxy-purple: #2b1055;    /* Cosmic purple */
   --galaxy-blue: #1b2a4e;      /* Night sky blue */
+  /* Accents */
   --nebula-pink: #ff5ebc;      /* Nebula glow */
+  --nebula-cyan: #5ee7ff;      /* Star light cyan */
+  --star-yellow: #ffe066;      /* Star glow */
   /* Text */
   --text-main: #f1f1f1;        /* Main text */
   --text-muted: #b3b3cc;      /* Secondary text */
