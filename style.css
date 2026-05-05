@@ -87,6 +87,7 @@ h1{
 }
 
 .score h3 {
+  color: var( --text-muted);
   margin: 0;
   font-size: 18px;
 }
