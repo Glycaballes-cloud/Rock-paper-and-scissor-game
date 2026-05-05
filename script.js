@@ -4,45 +4,63 @@ const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 
+const playerScoreDisplay = document.getElementById("player-score");
+const computerScoreDisplay = document.getElementById("computer-score");
+
+let playerScore = 0;
+let computerScore = 0;
+
+// MAIN GAME FUNCTION
 function play(playerChoice) {
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-    console.log(computerChoice);
     let result = "";
+
     if (playerChoice === computerChoice) {
         result = "It's a tie!";
-    } else if ((playerChoice === "rock" && computerChoice === "scissor") ||
-               (playerChoice === "paper" && computerChoice === "rock") ||
-               (playerChoice === "scissor" && computerChoice === "paper")) {
+    } 
+    else if (
+        (playerChoice === "rock" && computerChoice === "scissor") ||
+        (playerChoice === "paper" && computerChoice === "rock") ||
+        (playerChoice === "scissor" && computerChoice === "paper")
+    ) {
         result = "You win!";
-    } else {
+        playerScore++; // ✅ ADD PLAYER SCORE
+    } 
+    else {
         result = "Computer wins!";
+        computerScore++; // ✅ ADD COMPUTER SCORE
     }
 
- // Update text
+    // Update text
     playerDisplay.textContent = `Player: ${playerChoice}`;
     computerDisplay.textContent = `Computer: ${computerChoice}`;
     resultDisplay.textContent = result;
-    
-// Update color
-     updateResultColor(result);
+
+    // Update score in HTML
+    updateScore();
+
+    // Update color
+    updateResultColor(result);
 }
 
-// Color handler
+// COLOR HANDLER
 function updateResultColor(result) {
     switch (result) {
         case "You win!":
-            resultDisplay.style.color =
-                rootStyles.getPropertyValue("--nebula-cyan");
+            resultDisplay.style.color = "cyan";
             break;
 
         case "Computer wins!":
-            resultDisplay.style.color =
-                rootStyles.getPropertyValue("--nebula-pink");
+            resultDisplay.style.color = "pink";
             break;
 
         default:
-            resultDisplay.style.color =
-                rootStyles.getPropertyValue("--star-yellow");
+            resultDisplay.style.color = "yellow";
     }
 }
 
+// SCORE UPDATE FUNCTION
+function updateScore() {
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
+}
