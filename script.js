@@ -19,9 +19,9 @@ function play(playerChoice) {
         result = "It's a tie!";
     } 
     else if (
-        (playerChoice === "rock" && computerChoice === "scissor") ||
-        (playerChoice === "paper" && computerChoice === "rock") ||
-        (playerChoice === "scissor" && computerChoice === "paper")
+    (playerChoice === "rock" && computerChoice === "scissor") ||
+    (playerChoice === "paper" && computerChoice === "rock") ||
+    (playerChoice === "scissor" && computerChoice === "paper")
     ) {
         result = "You win!";
         playerScore++; // ✅ ADD PLAYER SCORE
