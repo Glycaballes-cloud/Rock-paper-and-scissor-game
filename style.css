@@ -1,74 +1,78 @@
 /* Color pallet for the game */
 :root {
   /* Backgrounds */
-  --galaxy-dark: #0b0f2b;       /* Deep space navy */
-  --galaxy-purple: #2b1055;    /* Cosmic purple */
-  --galaxy-blue: #1b2a4e;      /* Night sky blue */
+  --galaxy-dark: #0b0f2b;
+  --galaxy-purple: #2b1055;
+  --galaxy-blue: #1b2a4e;
+
   /* Accents */
-  --nebula-pink: #ff5ebc;      /* Nebula glow */
-  --nebula-cyan: #5ee7ff;      /* Star light cyan */
-  --star-yellow: #ffe066;      /* Star glow */
+  --nebula-pink: #ff5ebc;
+  --nebula-cyan: #5ee7ff;
+  --star-yellow: #ffe066;
+
   /* Text */
-  --text-main: #f1f1f1;        /* Main text */
-  --text-muted: #b3b3cc;      /* Secondary text */
+  --text-main: #f1f1f1;
+  --text-muted: #b3b3cc;
 
   /* Buttons */
   --btn-bg: #3a1c71;
   --btn-hover: #6a4bcf;
 }
 
-body{
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    margin: 0;
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    display: flex;
-    text-align: center;
-    background: linear-gradient(135deg, var(--galaxy-dark), var(--galaxy-purple), var(--galaxy-blue));
+body {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  background: linear-gradient(135deg, var(--galaxy-dark), var(--galaxy-purple), var(--galaxy-blue));
 }
 
-h1{
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    color: var(--text-main);
+h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--text-main);
 }
 
-.choices{
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+.choices {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
 
-.choices button{
-    font-size: 7.5rem;
-    max-width: 90%;
-    margin: 0 10px;
-    touch-action: manipulation;
-    padding: 1rem;
-    cursor: pointer;
-    background-color: var(--btn-bg);
-    color: var(--text-main);
-    border: none;
-    border-radius: 250px;
-    transition: background-color 0.5s ease;
+.choices button {
+  font-size: 7.5rem;
+  max-width: 90%;
+  margin: 0 10px;
+  touch-action: manipulation;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--btn-bg);
+  color: var(--text-main);
+  border: none;
+  border-radius: 250px;
+  transition: background-color 0.5s ease;
 }
 
-.choices button:hover{
-    background-color: var(--btn-hover);
+.choices button:hover {
+  background-color: var(--btn-hover);
 }
 
-#playerDisplay, #computerDisplay, #resultDisplay {
-    font-size: 2.5rem;
-    color: var(--text-main);
-    margin: 20px 0;
+#playerDisplay,
+#computerDisplay,
+#resultDisplay {
+  font-size: 2.5rem;
+  color: var(--text-main);
+  margin: 20px 0;
 }
 
 #resultDisplay {
-    font-size: 5rem;
-    color: var(--nebula-pink);
+  font-size: 5rem;
+  color: var(--nebula-pink);
 }
 
 .scoreboard {
@@ -87,7 +91,7 @@ h1{
 }
 
 .score h3 {
-  color: var( --text-muted);
+  color: var(--text-muted);
   margin: 0;
   font-size: 18px;
 }
@@ -96,4 +100,41 @@ h1{
   font-size: 32px;
   font-weight: bold;
   color: var(--text-main);
+}
+
+/* ✅ NEW: Score selector */
+.score-select {
+  margin: 15px;
+  font-size: 1.2rem;
+  color: var(--text-main);
+}
+
+.score-select select {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+/* ✅ NEW: Winner display */
+#winnerDisplay {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+/* ✅ NEW: Restart button */
+#restartBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+#restartBtn:hover {
+  background-color: var(--btn-hover);
 }
