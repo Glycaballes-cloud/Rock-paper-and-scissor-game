@@ -32,8 +32,24 @@ body {
   background: linear-gradient(135deg, var(--galaxy-dark), var(--galaxy-purple), var(--galaxy-blue));
 }
 
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
 h1 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: 5cap;
   color: var(--text-main);
 }
 
@@ -45,7 +61,7 @@ h1 {
 }
 
 .choices button {
-  font-size: 7.5rem;
+  font-size: 5rem;
   max-width: 90%;
   margin: 0 10px;
   touch-action: manipulation;
@@ -71,7 +87,7 @@ h1 {
 }
 
 #resultDisplay {
-  font-size: 5rem;
+  font-size: 3rem;
   color: var(--nebula-pink);
 }
 
@@ -93,11 +109,11 @@ h1 {
 .score h3 {
   color: var(--text-muted);
   margin: 0;
-  font-size: 18px;
+  font-size: 10px;
 }
 
 .score span {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: bold;
   color: var(--text-main);
 }
